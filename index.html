@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Section Content -->
+
+<head>
+    <!-- Page title -->
+    <title>Stonks</title>
+
+    <style>
+        body {
+            background-image: url("images/wallstreet-be6e21ad26e546dd8b015d7be5d71528.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: black;
+            font-weight: bold;
+        }
+        .grid-container {
+            display: grid;
+            column-gap: 0%;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+        }
+
+        .grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            margin-left: 10%;
+            margin-right: 40px;
+            border-radius: 20px;
+        }
+
+        .panel {
+            /* display: inline-block; */
+            /* display: ; */
+            /* width: 45vw; */
+            background-color: #fcfcfc;
+            opacity: 0.75;
+            /* margin: 16px; */
+            text-size-adjust: 32px;
+            /* margin-top: 3px; */
+            padding-left: 18px;
+            /* padding-top: 1%; */
+            /* padding-bottom: 32px; */
+            /* border-radius: 30px; */
+        }
+        .form {
+            text-align: left;
+        }
+        .submit {
+            width: 20%;
+            height: 10%;
+        }
+        .header {
+            text-align: center;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<!-- Body Section Content -->
+
+<body>
+    <!-- Heading Content -->
+    <div class="header">
+        <h1>Stock list</h1>
+    </div>
+        
+    <!-- Grid container-->
+    <div class="grid-container">
+        <!-- Creating a form -->
+        <div class="grid-item">
+            <form action id="form">
+                 <fieldset>
+                    <legend>Which stock would you like to see?</legend>
+
+                    <!-- Label and input field -->
+                    <p>
+                        <label>Stock name: <br/><input id ="nameOfStock" placeholder="Stock Name"/></label>
+                    </p>
+                    <p>
+                        <label>Year: <br><input id="Year" placeholder="Year" /></label>
+                    </p>
+                    <!-- Label and radio button field -->
+                    <p>
+                        View highest or lowest value: <br/>
+                        <label><input type="radio" id="High" name="Highest or Lowest:" value="High" /> High</label>
+
+                        <label><input type="radio" id="Low"name="Highest or Lowest:" value="Low" /> Low</label>
+                    </p>
+                    <!-- Creating a button -->
+                    <p>
+                    </p>
+                </fieldset>
+            </form>
+            <button class="submit" id="submit-button" onclick="getStocks()">Submit</button>
+        </div>
+
+        <div class="grid-item">
+            <p>
+                <label>Stock: <input id="outPutStock" /></label>
+            </p>
+
+        </div>
+            
+    </div>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
