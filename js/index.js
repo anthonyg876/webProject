@@ -9,7 +9,6 @@ async function getStocks() {
     
     const heapSort = document.getElementById("HeapSort");
     const TimSort = document.getElementById("TimSort");
-    let outPut;
     let algorithm;
 
     console.log(TimSort.checked);
@@ -28,4 +27,11 @@ async function getStocks() {
     const jsonData = await getJson('http://localhost:8080/stocks/' + name.value + "/" + algorithm.value);
 
     console.log({ jsonData });
+    console.log(jsonData.high);
+    let max = jsonData.high.toFixed(2);
+    let min = jsonData.low.toFixed(2);
+
+    
+    document.getElementById("maxValue").value = max;
+    document.getElementById("minValue").value = min;
 }   
