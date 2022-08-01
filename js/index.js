@@ -30,8 +30,11 @@ async function getStocks() {
     console.log(jsonData.high);
     let max = jsonData.high.toFixed(2);
     let min = jsonData.low.toFixed(2);
+    let timeTaken = jsonData.timeForAlgorithm;
 
     
     document.getElementById("maxValue").value = max;
     document.getElementById("minValue").value = min;
+    document.getElementById("algorithmTime").value = timeTaken;
+
 }   
